@@ -40,6 +40,29 @@ document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Current time is "+video.currentTime)
 });
 
-// document.querySelector("#orig").addEventListener("click", function() {
-// 	video.classList.removeClass(".oldSchool");
-// })
+document.querySelector("#mute").addEventListener("click", function() {
+	console.log("Mute");
+	if (!video.muted) {  // when it is not muted
+		video.muted = true;
+		document.querySelector("#mute").innerHTML = "Unmute";
+	} else {
+		video.muted = false;
+		document.querySelector("#mute").innerHTML = "Mute";
+	}
+});
+
+document.querySelector("#slider").addEventListener("change", function() {
+	console.log("Volume Slider");
+	video.volume = (document.querySelector("#slider").value)/100;
+	document.querySelector("#volume").innerHTML = video.volume*100 + '%';
+});
+
+document.querySelector("#vintage").addEventListener("click", function() {
+	console.log("Old School");
+	video.classList.add("oldSchool");
+});
+
+document.querySelector("#orig").addEventListener("click", function() {
+	console.log("original");
+	video.classList.remove("oldSchool");
+})
