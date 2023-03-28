@@ -23,20 +23,20 @@ document.querySelector("#pause").addEventListener("click", function(){
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down Video");
 	video.playbackRate *= 0.95;
-	console.log("Playback rate is "+video.playbackRate);
+	console.log("Playback rate is ", video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed up video");
 	video.playbackRate /= 0.95;
-	console.log("Playback rate is "+video.playbackRate);
+	console.log("Playback rate is ", video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Skip the video");
 	if (video.currentTime+15 < video.duration) video.currentTime += 15;
 	else video.currentTime = 0;
-	console.log("Current time is "+video.currentTime)
+	console.log("Current time is ", video.currentTime)
 });
 
 document.querySelector("#mute").addEventListener("click", function() {
