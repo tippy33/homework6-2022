@@ -24,7 +24,6 @@ document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down Video");
 	video.playbackRate *= 0.95;
 	console.log("Playback rate is "+video.playbackRate);
-
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
