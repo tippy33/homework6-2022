@@ -22,19 +22,19 @@ document.querySelector("#pause").addEventListener("click", function(){
 
 document.querySelector("#slower").addEventListener("click", function() {
 	console.log("Slow Down Video");
-	video.playbackRate *= 0.95;
+	video.playbackRate *= 0.90;
 	console.log("Playback rate is ", video.playbackRate);
 });
 
 document.querySelector("#faster").addEventListener("click", function() {
 	console.log("Speed up video");
-	video.playbackRate /= 0.95;
+	video.playbackRate /= 0.90;
 	console.log("Playback rate is ", video.playbackRate);
 });
 
 document.querySelector("#skip").addEventListener("click", function() {
 	console.log("Skip the video");
-	if (video.currentTime+15 < video.duration) video.currentTime += 15;
+	if (video.currentTime+10 < video.duration) video.currentTime += 10;
 	else video.currentTime = 0;
 	console.log("Current time is ", video.currentTime)
 });
